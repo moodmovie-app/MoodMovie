@@ -1,0 +1,4 @@
+# File legacy non più usati dall'app: contengono ancora il vecchio player
+# non autorizzato (vixsrc/vidsrc) e non vanno pubblicati sul sito live.
+app.legacy.js
+legacy.css
