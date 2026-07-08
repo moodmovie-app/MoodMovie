@@ -271,9 +271,9 @@
 
         /* ── SEZIONI CAST & MERCHANDISE NEL MODALE FILM ── */
         .modal-section-title-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
-        .cast-row { display: flex; gap: 14px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; padding-top: 8px; margin-top: -8px; }
+        .cast-row { display: flex; align-items: flex-start; gap: 14px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; padding-top: 8px; margin-top: -8px; }
         .cast-row::-webkit-scrollbar { display: none; }
-        .cast-card { flex-shrink: 0; width: 76px; text-align: center; cursor: pointer; transition: transform 0.25s var(--bezier); background: none; border: none; padding: 0; font-family: inherit; }
+        .cast-card { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 76px; text-align: center; cursor: pointer; transition: transform 0.25s var(--bezier); background: none; border: none; padding: 0; font-family: inherit; }
         .cast-card:hover, .cast-card:active { transform: translateY(-3px); }
         .cast-card-photo { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; background: var(--surface); border: 2px solid var(--border-soft); margin-bottom: 8px; display: flex; align-items: center; justify-content: center; }
         .cast-card-name { font-size: 0.72rem; font-weight: 700; color: #fff; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
