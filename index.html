@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>MoodMovie Ultra</title>
-    
+    <meta name="description" content="Non sai cosa guardare? Scegli il mood e trova subito film e serie TV su misura per come ti senti, con indicazione di dove guardarli legalmente in streaming.">
+
     <meta name="theme-color" content="#07070b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -636,7 +637,10 @@
     </div>
 </div>
 
-<!-- Ricerca per mood: il punto d'ingresso principale per chi non sa cosa guardare -->
+<!-- Ricerca per mood: tolta da qui per ripristinare la sfumatura locandina/header
+     (rompeva l'overlap tra hero-banner e header). Il markup resta qui commentato:
+     va riorganizzata in un punto che non interrompa quella sfumatura. Vedi anche
+     searchMood() e .mood-section/.mood-chip in CSS, entrambi ancora presenti e pronti al riuso.
 <div id="moodSection" class="mood-section">
     <div class="mood-section-title">Non sai cosa guardare? Scegli il mood</div>
     <div class="mood-row">
@@ -650,6 +654,7 @@
         <div class="mood-chip" onclick="searchMood('giallo')">🕵️ Giallo</div>
     </div>
 </div>
+-->
 
 <div id="heroBanner" class="hero-banner"></div>
 
@@ -1158,7 +1163,7 @@
     window.onload = () => {
         initCookieConsent();
         window.scrollTo(0,0);
-        document.getElementById('homeAvatarRow').style.display = 'flex'; document.getElementById('moodSection').style.display = 'block';
+        document.getElementById('homeAvatarRow').style.display = 'flex';
         document.getElementById('sortBarRow').style.display = 'none';
         document.getElementById('sectionTitle').style.display = 'none';
         loadContent();
@@ -1316,7 +1321,7 @@
             document.getElementById('sortBar').style.display = 'flex';
             document.getElementById('sortBarRow').style.display = 'flex';
             document.getElementById('sectionTitle').style.display = 'block';
-            document.getElementById('homeAvatarRow').style.display = 'none'; document.getElementById('moodSection').style.display = 'none';
+            document.getElementById('homeAvatarRow').style.display = 'none';
             document.getElementById('sectionTitle').innerText = `Categoria: ${genreName}`;
             window.scrollTo(0, 0);
         }
@@ -1353,7 +1358,7 @@
         document.getElementById('sectionTitle').style.display = 'none';
         document.getElementById('movieGrid').innerHTML = '';
         document.getElementById('loadMoreBtn').style.display = 'none';
-        document.getElementById('homeAvatarRow').style.display = 'flex'; document.getElementById('moodSection').style.display = 'block';
+        document.getElementById('homeAvatarRow').style.display = 'flex';
         setHeroVisible(false); // evita che l'hero banner resti "incantato" sulla sezione precedente mentre carica quella nuova
         window.scrollTo(0,0);
         loadContent();
@@ -1365,7 +1370,7 @@
         activeFetchController = new AbortController();
         isFetching = true;
         document.getElementById('loading').style.display = 'block';
-        document.getElementById('homeAvatarRow').style.display = 'flex'; document.getElementById('moodSection').style.display = 'block';
+        document.getElementById('homeAvatarRow').style.display = 'flex';
         try {
             // Fetch parallelo: trending, now_playing/on_the_air, top_rated, in arrivo
             const [trendRes, newRes, topRes, upcomingRes] = await Promise.all([
@@ -1710,7 +1715,7 @@
         searchActive = true;
         currentSimilarId = null;
         currentCategoryId = null;
-        document.getElementById('homeAvatarRow').style.display = 'none'; document.getElementById('moodSection').style.display = 'none';
+        document.getElementById('homeAvatarRow').style.display = 'none';
         document.getElementById('sectionTitle').style.display = 'block';
         document.getElementById('loading').style.display = 'block';
         let url;
@@ -1762,7 +1767,7 @@
         grid.className = 'movie-grid';
         document.getElementById('sortBarRow').style.display = 'flex';
         document.getElementById('sectionTitle').style.display = 'block';
-        document.getElementById('homeAvatarRow').style.display = 'none'; document.getElementById('moodSection').style.display = 'none';
+        document.getElementById('homeAvatarRow').style.display = 'none';
         setHeroVisible(false);
         if (!append) grid.innerHTML = '';
         if (!items || items.length === 0 && !append) { grid.innerHTML = `<div style="grid-column:1/-1;">${emptyStateHTML('fa-magnifying-glass', 'Nessun risultato trovato')}</div>`; return; }
@@ -1922,7 +1927,7 @@
     }
 
     async function getSimilar(id, title, type, append = false) {
-        if (!append) { closeModal(); page = 1; currentMovies = []; currentSimilarId = id; searchActive = false; document.getElementById('movieGrid').innerHTML = ''; document.getElementById('sectionTitle').style.display='block'; document.getElementById('sectionTitle').innerText = `Simili a: ${title}`; document.getElementById('homeAvatarRow').style.display='none'; document.getElementById('moodSection').style.display='none'; window.scrollTo(0,0); }
+        if (!append) { closeModal(); page = 1; currentMovies = []; currentSimilarId = id; searchActive = false; document.getElementById('movieGrid').innerHTML = ''; document.getElementById('sectionTitle').style.display='block'; document.getElementById('sectionTitle').innerText = `Simili a: ${title}`; document.getElementById('homeAvatarRow').style.display='none'; window.scrollTo(0,0); }
         if (activeFetchController) activeFetchController.abort();
         activeFetchController = new AbortController();
         isFetching = true;
@@ -2354,7 +2359,7 @@
         document.getElementById('sectionTitle').innerText = "La tua Libreria";
         document.getElementById('sectionTitle').style.display = 'block';
         document.getElementById('sortBarRow').style.display = 'none';
-        document.getElementById('homeAvatarRow').style.display = 'none'; document.getElementById('moodSection').style.display = 'none';
+        document.getElementById('homeAvatarRow').style.display = 'none';
         document.getElementById('loadMoreBtn').style.display = 'none';
         currentSimilarId = null;
         currentCategoryId = null;
@@ -2693,7 +2698,7 @@
         document.getElementById('sectionTitle').innerText = "Profilo";
         document.getElementById('sectionTitle').style.display = 'block';
         document.getElementById('sortBarRow').style.display = 'none';
-        document.getElementById('homeAvatarRow').style.display = 'none'; document.getElementById('moodSection').style.display = 'none';
+        document.getElementById('homeAvatarRow').style.display = 'none';
         document.getElementById('loadMoreBtn').style.display = 'none';
         currentSimilarId = null; currentCategoryId = null;
         const isEnteringProfile = currentView !== 'profile';
