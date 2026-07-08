@@ -269,6 +269,16 @@
         .mon-link:hover { border-color: var(--primary); color: #fff; }
         .ad-slot { margin-top: 16px; min-height: 90px; display: flex; align-items: center; justify-content: center; background: var(--surface); border: 1px dashed var(--border-soft); border-radius: var(--radius-sm); color: var(--text-dim); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
 
+        /* ── SEZIONI CAST & MERCHANDISE NEL MODALE FILM ── */
+        .modal-section-title-row { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; }
+        .cast-row { display: flex; gap: 14px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+        .cast-row::-webkit-scrollbar { display: none; }
+        .cast-card { flex-shrink: 0; width: 76px; text-align: center; cursor: pointer; transition: transform 0.25s var(--bezier); background: none; border: none; padding: 0; font-family: inherit; }
+        .cast-card:hover, .cast-card:active { transform: translateY(-3px); }
+        .cast-card-photo { width: 76px; height: 76px; border-radius: 50%; object-fit: cover; background: var(--surface); border: 2px solid var(--border-soft); margin-bottom: 8px; display: flex; align-items: center; justify-content: center; }
+        .cast-card-name { font-size: 0.72rem; font-weight: 700; color: #fff; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+        .cast-card-role { font-size: 0.65rem; color: var(--text-dim); margin-top: 2px; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
         .profile-actions { display: flex; justify-content: center; gap: 10px; margin: 28px 0 8px; }
         .profile-exit-btn { padding: 16px 42px; background: var(--gradient-primary); color: #fff; border: none; border-radius: var(--radius-md); font-size: 0.9rem; font-weight: 800; cursor: pointer; letter-spacing: 0.5px; box-shadow: var(--shadow-glow); display: flex; align-items: center; gap: 6px; transition: transform 0.25s var(--bezier); }
         .profile-exit-btn:hover { transform: translateY(-2px); }
@@ -738,6 +748,11 @@
         <p id="modalPlot"></p>
         <button id="modalPlotToggle" class="modal-plot-toggle" onclick="toggleModalPlot()" style="display:none;"><span data-i18n="readMore">Leggi tutto</span> <i class="fa-solid fa-chevron-down"></i></button>
 
+        <div class="watch-btn-row">
+            <button id="trailerTrigger" onclick="playTrailer()" class="btn-watch"><i class="fa-solid fa-clapperboard" style="margin-right: 8px;"></i> <span data-i18n="watchTrailer">VEDI TRAILER</span></button>
+            <button id="similarTrigger" class="btn-original" style="margin-top:0; flex:1; min-width:0;"><i class="fa-solid fa-wand-magic-sparkles" style="margin-right: 8px;"></i> <span data-i18n="findSimilar">VIBES</span></button>
+        </div>
+
         <div id="videoPlayer" class="video-container"></div>
 
         <div id="epSelector" class="ep-selector">
@@ -767,8 +782,8 @@
         </div>
         <button id="followUpcomingBtn" class="btn-original" style="display:none;" onclick="toggleFollowUpcoming()"><i class="fa-solid fa-bell" style="margin-right: 8px;"></i> <span id="followUpcomingBtnLabel" data-i18n="notifyMe">Avvisami quando è disponibile</span></button>
 
-        <div id="modalProviders" style="margin-top: 25px;">
-            <span style="font-size: 0.7rem; color: var(--text-dim); font-weight: 800; text-transform: uppercase;" data-i18n="whereToWatch">Dove guardarlo</span>
+        <div id="modalProviders" style="margin-top: 28px;">
+            <div class="modal-section-title-row"><i class="fa-solid fa-tv" style="color:var(--primary);font-size:0.9rem;"></i><span class="home-section-title" data-i18n="whereToWatch">Dove guardarlo</span></div>
             <div id="platformList" class="platform-grid"></div>
             <div id="noProviderHint" style="display:none; font-size:0.78rem; color: var(--text-dim); margin-top:10px; line-height:1.5;" data-i18n="noProviderHint">Non disponibile in abbonamento nel tuo paese al momento.</div>
             <div id="monetizationBlock" class="monetization-block">
@@ -780,11 +795,15 @@
             <div id="adSlot" class="ad-slot" style="display:none;"></div>
         </div>
 
-        <div class="modal-actions-row">
-            <button id="trailerTrigger" onclick="playTrailer()" class="btn-trailer"><i class="fa-solid fa-clapperboard" style="margin-right: 8px;"></i> <span data-i18n="watchTrailer">VEDI TRAILER</span></button>
+        <div id="castSection" style="display:none; margin-top: 28px;">
+            <div class="modal-section-title-row"><i class="fa-solid fa-users" style="color:var(--primary);font-size:0.9rem;"></i><span class="home-section-title" data-i18n="castHeader">Cast</span></div>
+            <div id="castRow" class="cast-row"></div>
         </div>
 
-        <button id="similarTrigger" class="btn-similar"><i class="fa-solid fa-wand-magic-sparkles" style="margin-right: 8px;"></i> <span data-i18n="findSimilar">TROVA SIMILI & VIBES</span></button>
+        <div id="merchSection" style="margin-top: 28px;">
+            <div class="modal-section-title-row"><i class="fa-solid fa-bag-shopping" style="color:var(--primary);font-size:0.9rem;"></i><span class="home-section-title" data-i18n="merchHeader">Merchandise ufficiale</span></div>
+            <div id="merchRow" class="mood-row"></div>
+        </div>
     </div>
 </div>
 
@@ -957,7 +976,7 @@
         vpnLinkText: "Non disponibile con il tuo abbonamento? Guarda i cataloghi di altri paesi",
         amazonLinkText: "Noleggia o acquistalo su Amazon",
         watchTrailer: "VEDI TRAILER",
-        findSimilar: "TROVA SIMILI & VIBES",
+        findSimilar: "VIBES",
         noOverview: "Descrizione non disponibile.",
         comingSoonSuffixTv: "in TV",
         comingSoonSuffixTheatrical: "al cinema",
@@ -1042,6 +1061,12 @@
         navLibrary: "Libreria",
         adSlotPlaceholder: "Spazio pubblicitario",
         languageHeader: "Lingua",
+        castHeader: "Cast",
+        merchHeader: "Merchandise ufficiale",
+        merchTshirt: "Maglietta",
+        merchPoster: "Poster",
+        merchFigure: "Action Figure",
+        merchFunko: "Funko Pop",
         moodPageTitle: "Film e serie {mood} da guardare | MoodMovie",
         moodPageDescription: "Scopri i migliori film e serie TV in mood {mood}, con indicazione di dove guardarli legalmente in streaming.",
       },
@@ -1110,7 +1135,7 @@
         vpnLinkText: "Not available with your subscription? Browse catalogs from other countries",
         amazonLinkText: "Rent or buy it on Amazon",
         watchTrailer: "WATCH TRAILER",
-        findSimilar: "FIND SIMILAR & VIBES",
+        findSimilar: "VIBES",
         noOverview: "Description not available.",
         comingSoonSuffixTv: "on TV",
         comingSoonSuffixTheatrical: "in theaters",
@@ -1195,6 +1220,12 @@
         navLibrary: "Library",
         adSlotPlaceholder: "Advertisement",
         languageHeader: "Language",
+        castHeader: "Cast",
+        merchHeader: "Official Merchandise",
+        merchTshirt: "T-Shirt",
+        merchPoster: "Poster",
+        merchFigure: "Action Figure",
+        merchFunko: "Funko Pop",
         moodPageTitle: "{mood} movies and shows to watch | MoodMovie",
         moodPageDescription: "Discover the best {mood} movies and TV shows, with info on where to watch them legally in streaming.",
       },
@@ -1263,7 +1294,7 @@
         vpnLinkText: "¿No disponible con tu suscripción? Consulta catálogos de otros países",
         amazonLinkText: "Alquílala o cómprala en Amazon",
         watchTrailer: "VER TRÁILER",
-        findSimilar: "BUSCAR SIMILARES Y VIBES",
+        findSimilar: "VIBES",
         noOverview: "Descripción no disponible.",
         comingSoonSuffixTv: "en TV",
         comingSoonSuffixTheatrical: "en cines",
@@ -1348,6 +1379,12 @@
         navLibrary: "Biblioteca",
         adSlotPlaceholder: "Espacio publicitario",
         languageHeader: "Idioma",
+        castHeader: "Reparto",
+        merchHeader: "Merchandising oficial",
+        merchTshirt: "Camiseta",
+        merchPoster: "Póster",
+        merchFigure: "Figura de acción",
+        merchFunko: "Funko Pop",
         moodPageTitle: "Películas y series de {mood} para ver | MoodMovie",
         moodPageDescription: "Descubre las mejores películas y series de {mood}, con indicación de dónde verlas legalmente en streaming.",
       }
@@ -2827,7 +2864,7 @@
     async function openModal(id, type) {
         if (type === 'tv') window._currentTvId = id; else window._currentTvId = null;
         // release_dates serve solo per i film: dice se hanno avuto un'uscita al cinema (vedi hasTheatricalRelease)
-        const appendParams = type === 'movie' ? 'videos,watch/providers,release_dates' : 'videos,watch/providers';
+        const appendParams = type === 'movie' ? 'videos,watch/providers,release_dates,credits' : 'videos,watch/providers,credits';
         const res = await fetch(`${BASE_URL}/${type}/${id}?api_key=${API_KEY}&language=${TMDB_LANG[currentLang]}&append_to_response=${appendParams}`);
         const data = await res.json();
         const title = data.title || data.name;
@@ -2917,8 +2954,51 @@
         document.getElementById('amazonAffLink').onclick = () => trackEvent('amazon_click', { item_name: title, value: 1, currency: 'EUR' });
 
         document.getElementById('similarTrigger').onclick = () => getSimilar(id, title, type);
+
+        // ── CAST: foto + nome, cliccando si vedono le opere di quell'attore/attrice ──
+        const cast = (data.credits && data.credits.cast) ? data.credits.cast.filter(c => c.profile_path || c.name).slice(0, 15) : [];
+        const castSection = document.getElementById('castSection');
+        const castRow = document.getElementById('castRow');
+        if (cast.length) {
+            castSection.style.display = 'block';
+            castRow.innerHTML = cast.map(c => {
+                const safeName = (c.name || '').replace(/'/g, "\\'").replace(/</g, '&lt;');
+                const photo = c.profile_path
+                    ? `<img class="cast-card-photo" src="https://image.tmdb.org/t/p/w185${c.profile_path}" loading="lazy" alt="${(c.name || '').replace(/"/g, '&quot;')}">`
+                    : `<div class="cast-card-photo"><i class="fa-solid fa-user" style="color:var(--text-dim);font-size:1.4rem;"></i></div>`;
+                return `<button class="cast-card" onclick="showActorWorks(${c.id}, '${safeName}')">${photo}<div class="cast-card-name">${(c.name || '').replace(/</g, '&lt;')}</div><div class="cast-card-role">${(c.character || '').replace(/</g, '&lt;')}</div></button>`;
+            }).join('');
+        } else {
+            castSection.style.display = 'none';
+        }
+
+        // ── MERCHANDISE UFFICIALE: link di ricerca Amazon per categoria (nessun dato prodotto reale disponibile via TMDB) ──
+        document.getElementById('merchRow').innerHTML = MERCH_CATEGORIES.map(m =>
+            `<a class="mood-chip" style="text-decoration:none;" href="${buildAmazonMerchLink(title, m.query)}" target="_blank" rel="sponsored noopener" onclick="trackEvent('merch_click', {item_name: '${title.replace(/'/g, "\\'")}', category: '${m.query}'})"><i class="fa-solid ${m.icon}" style="margin-right:6px;"></i>${t(m.labelKey)}</a>`
+        ).join('');
+
         document.getElementById('movieModal').classList.add('open');
         document.body.style.overflow = 'hidden';
+    }
+
+    // Chiamata dai riquadri del cast nel modale: chiude il modale e mostra le opere di quell'attore/attrice,
+    // riusando la stessa ricerca "per attore" già presente nel menu di ricerca (stesso comportamento, incluso "Carica altri").
+    function showActorWorks(actorId, actorName) {
+        closeModal();
+        searchType = 'actor';
+        document.getElementById('searchInput').value = actorName;
+        searchItems(false);
+    }
+
+    const MERCH_CATEGORIES = [
+        { icon: 'fa-shirt', labelKey: 'merchTshirt', query: 't-shirt' },
+        { icon: 'fa-image', labelKey: 'merchPoster', query: 'poster' },
+        { icon: 'fa-person', labelKey: 'merchFigure', query: 'action figure' },
+        { icon: 'fa-cubes', labelKey: 'merchFunko', query: 'funko pop' }
+    ];
+    function buildAmazonMerchLink(title, query) {
+        const q = encodeURIComponent(`${title} ${query}`);
+        return `https://www.amazon.it/s?k=${q}&tag=${encodeURIComponent(MONETIZATION.amazonAssociateTag)}`;
     }
 
     function toggleEpMenu(kind, e) {
