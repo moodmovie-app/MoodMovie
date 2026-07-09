@@ -2627,6 +2627,7 @@
         if (filterMoods.has(i)) filterMoods.delete(i); else filterMoods.add(i);
         el.classList.toggle('selected');
         el.blur();
+        void el.offsetHeight; // forza un repaint immediato (Safari a volte non ridisegna i chip in una riga scrollabile finché non arriva un altro touch/scroll)
         updateFilterBadge();
     }
 
@@ -2646,6 +2647,7 @@
         if (filterGenres.has(id)) filterGenres.delete(id); else filterGenres.add(id);
         el.classList.toggle('selected');
         el.blur();
+        void el.offsetHeight; // forza un repaint immediato (stesso fix di toggleMoodChip)
         updateFilterBadge();
     }
 
