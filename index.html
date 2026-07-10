@@ -186,6 +186,7 @@
         
         .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; margin-top: -10px; min-height: 70vh; position: relative; z-index: 1; }
         #sectionTitle { font-family: 'Sora', 'Inter', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.8px; color: var(--text-dim); margin: 20px 0 14px 4px; font-weight: 700; }
+        .mood-editorial-text { font-size: 0.85rem; line-height: 1.55; color: var(--text-dim); margin: -6px 4px 18px; max-width: 640px; }
 
         .movie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(105px, 1fr)); gap: 14px; position: relative; z-index: 1; }
         .movie-card { background: var(--card-bg); border-radius: var(--radius-md); overflow: hidden; position: relative; transition: transform 0.45s var(--bezier), box-shadow 0.45s var(--bezier), opacity 0.4s ease; opacity: 0; transform: translateY(20px); z-index: 1; box-shadow: var(--shadow-card); border: 1px solid rgba(255,255,255,0.05); }
@@ -735,6 +736,7 @@
     </div>
 
     <h2 id="sectionTitle" style="display:none;" data-i18n="defaultSectionTitle">Film Popolari</h2>
+    <p id="moodEditorial" class="mood-editorial-text" style="display:none;"></p>
     <div id="movieGrid"></div>
     <div id="loading" style="text-align: center; padding: 40px; display: none;"><i class="fa-solid fa-circle-notch fa-spin fa-2x" style="color:var(--primary)"></i></div>
     <button id="loadMoreBtn" class="load-more-btn" onclick="loadMore()" data-i18n="loadMore">CARICA ALTRI</button>
@@ -1038,6 +1040,7 @@
         aboutLink: "Chi siamo e Contatti",
         privacyLink: "Privacy Policy e Cookie",
         affiliateDisclosureLink: "Informativa sui link di affiliazione",
+        guideLink: "Guide: cosa guardare per ogni mood",
         tmdbAttribution: "Dati su film e serie TV forniti da TMDB. Questo prodotto usa l'API TMDB ma non è approvato o certificato da TMDB.",
         exitProfile: "Esci",
         newProfileTitle: "Nuovo profilo",
@@ -1198,6 +1201,7 @@
         aboutLink: "About & Contact",
         privacyLink: "Privacy Policy & Cookies",
         affiliateDisclosureLink: "Affiliate link disclosure",
+        guideLink: "Guides: what to watch for every mood",
         tmdbAttribution: "Movie and TV show data provided by TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.",
         exitProfile: "Exit",
         newProfileTitle: "New profile",
@@ -1358,6 +1362,7 @@
         aboutLink: "Quiénes somos y Contacto",
         privacyLink: "Política de privacidad y cookies",
         affiliateDisclosureLink: "Divulgación de enlaces de afiliados",
+        guideLink: "Guías: qué ver según tu mood",
         tmdbAttribution: "Datos de películas y series proporcionados por TMDB. Este producto usa la API de TMDB pero no está aprobado ni certificado por TMDB.",
         exitProfile: "Salir",
         newProfileTitle: "Nuevo perfil",
@@ -1871,103 +1876,188 @@
             it: ["triste", "piangere", "commovente", "malinconico", "dramma", "drammatico"],
             en: ["sad", "cry", "emotional", "heartbreaking", "melancholic", "drama", "dramatic", "tearjerker"],
             es: ["triste", "llorar", "emotivo", "conmovedor", "melancólico", "drama", "dramático"]
-          }, genre: 18, keywords: "9717|10531|172088" },
+          }, genre: 18, keywords: "9717|10531|172088",
+          intro: {
+            it: "Quando serve un buon pianto liberatorio, i film e le serie più commoventi funzionano meglio delle parole di conforto: storie di perdita, legami familiari e drammi umani che lasciano il segno, selezionati per chi cerca un'emozione vera più che un lieto fine a tutti i costi.",
+            en: "Sometimes a good cry helps more than any pep talk. These are emotional dramas about loss, family bonds and human struggle, picked for real feeling over a guaranteed happy ending.",
+            es: "A veces un buen llanto ayuda más que cualquier consejo. Dramas emotivos sobre pérdidas, lazos familiares y luchas humanas, elegidos por la emoción real más que por un final feliz garantizado."
+          } },
         { slug: "divertente", labels: { it: "Divertente", en: "Funny", es: "Divertido" }, emoji: "😂",
           keysByLang: {
             it: ["allegro", "ridere", "divertente", "felice", "comicità", "commedia"],
             en: ["funny", "laugh", "comedy", "hilarious", "happy", "lighthearted"],
             es: ["gracioso", "reír", "divertido", "feliz", "comedia"]
-          }, genre: 35 },
+          }, genre: 35,
+          intro: {
+            it: "Serate no, giornate pesanti o semplicemente voglia di staccare la spina: qui trovi commedie pensate per far ridere davvero, senza impegno, quando l'unica cosa che serve è alleggerire la testa per un paio d'ore.",
+            en: "Rough day, bad mood, or just craving something light? These comedies are picked to actually make you laugh, no effort required, when all you need is a couple of hours off your head.",
+            es: "Un mal día o simplemente ganas de desconectar: comedias pensadas para hacerte reír de verdad, sin esfuerzo, cuando lo único que necesitas es despejar la mente un par de horas."
+          } },
         { slug: "azione", labels: { it: "Azione", en: "Action", es: "Acción" }, emoji: "💥",
           keysByLang: {
             it: ["adrenalina", "azione", "movimento", "esplosivo", "combattimento", "lotta"],
             en: ["adrenaline", "action", "explosive", "fight", "fighting", "high-octane"],
             es: ["adrenalina", "acción", "explosivo", "pelea", "lucha"]
-          }, genre: 28, keywords: "9748" },
+          }, genre: 28, keywords: "9748",
+          intro: {
+            it: "Ritmo alto, inseguimenti, combattimenti e scene spettacolari: la selezione azione è pensata per chi vuole sentire l'adrenalina salire dal divano, senza tempi morti tra una sequenza e l'altra.",
+            en: "High pace, chases, fights and spectacular set pieces: this action pick is for when you want your adrenaline up from the couch, with no dead time between sequences.",
+            es: "Ritmo alto, persecuciones, peleas y escenas espectaculares: esta selección de acción es para sentir la adrenalina subir desde el sofá, sin tiempos muertos."
+          } },
         { slug: "horror", labels: { it: "Horror", en: "Horror", es: "Terror" }, emoji: "😱",
           keysByLang: {
             it: ["spavento", "paura", "horror", "terrore", "mostri"],
             en: ["scary", "fear", "horror", "terror", "monsters", "creepy"],
             es: ["miedo", "terror", "sustos", "monstruos"]
-          }, genre: 27 },
+          }, genre: 27,
+          intro: {
+            it: "Per chi cerca la scarica di paura vera: mostri, tensione e atmosfere inquietanti in una selezione horror pensata per una serata da guardare con le luci basse, magari non da soli.",
+            en: "For real scares on demand: monsters, tension and unsettling atmosphere in a horror pick made for lights-off nights — maybe not alone.",
+            es: "Para quienes buscan miedo de verdad: monstruos, tensión y atmósferas inquietantes en una selección de terror pensada para ver con las luces bajas."
+          } },
         { slug: "thriller", labels: { it: "Thriller", en: "Thriller", es: "Thriller" }, emoji: "😰",
           keysByLang: {
             it: ["brivido", "thriller", "tensione", "suspense"],
             en: ["thrill", "thriller", "tension", "suspense"],
             es: ["tensión", "suspense", "thriller"]
-          }, genre: 53 },
+          }, genre: 53,
+          intro: {
+            it: "Tensione costante, colpi di scena e la voglia di sapere subito come va a finire: i thriller di questa selezione puntano tutto sul suspense, non sull'azione fine a se stessa.",
+            en: "Constant tension, twists, and the itch to know how it ends right now: these thrillers bet everything on suspense, not action for its own sake.",
+            es: "Tensión constante, giros de guion y ganas de saber cómo termina ya: estos thrillers apuestan todo al suspense, no a la acción por sí sola."
+          } },
         { slug: "romantico", labels: { it: "Romantico", en: "Romantic", es: "Romántico" }, emoji: "❤️",
           keysByLang: {
             it: ["romantico", "amore", "innamorati", "fidanzati"],
             en: ["romantic", "love", "romance", "couple"],
             es: ["romántico", "amor", "romance", "pareja"]
-          }, genre: 10749 },
+          }, genre: 10749,
+          intro: {
+            it: "Per una serata in coppia o per chi ha semplicemente voglia di una storia d'amore che scalda: commedie romantiche e drammi sentimentali scelti per far battere il cuore un po' più forte.",
+            en: "For a date night in, or just craving a love story that warms you up: romantic comedies and heartfelt dramas picked to make your heart beat a little faster.",
+            es: "Para una noche en pareja o simplemente con ganas de una historia de amor que reconforte: comedias románticas y dramas elegidos para acelerar un poco el corazón."
+          } },
         { slug: "distopico", labels: { it: "Distopico", en: "Dystopian", es: "Distópico" }, emoji: "🌆",
           keysByLang: {
             it: ["distopico", "distopia", "futuro cupo", "apocalisse", "apocalittico", "post-apocalittico"],
             en: ["dystopian", "dystopia", "dark future", "apocalypse", "apocalyptic", "post-apocalyptic"],
             es: ["distópico", "distopía", "futuro oscuro", "apocalipsis", "apocalíptico", "postapocalíptico"]
-          }, keywords: "4565|285366|4458" },
+          }, keywords: "4565|285366|4458",
+          intro: {
+            it: "Società al collasso, futuri cupi e mondi post-apocalittici: una selezione per chi ama le storie che mettono in discussione il presente immaginando come potrebbe andare storto il domani.",
+            en: "Collapsing societies, bleak futures and post-apocalyptic worlds: a pick for stories that question the present by imagining how tomorrow could go wrong.",
+            es: "Sociedades en colapso, futuros oscuros y mundos post-apocalípticos: una selección para historias que cuestionan el presente imaginando cómo podría torcerse el mañana."
+          } },
         { slug: "spionaggio", labels: { it: "Spionaggio", en: "Espionage", es: "Espionaje" }, emoji: "🕶️",
           keysByLang: {
             it: ["spionaggio", "spie", "agente segreto", "007"],
             en: ["espionage", "spies", "secret agent", "007"],
             es: ["espionaje", "espías", "agente secreto", "007"]
-          }, keywords: "470|10410" },
+          }, keywords: "470|10410",
+          intro: {
+            it: "Agenti segreti, doppi giochi e missioni impossibili: la selezione spionaggio raccoglie storie di intrighi internazionali per chi ama la tensione fatta di strategia più che di caos.",
+            en: "Secret agents, double crosses and impossible missions: this espionage pick gathers international intrigue for tension built on strategy rather than chaos.",
+            es: "Agentes secretos, dobles juegos y misiones imposibles: esta selección de espionaje reúne intrigas internacionales para una tensión hecha de estrategia más que de caos."
+          } },
         { slug: "catastrofe", labels: { it: "Catastrofe", en: "Disaster", es: "Catástrofe" }, emoji: "🌪️",
           keysByLang: {
             it: ["catastrofe", "disastro", "calamità", "fine del mondo", "terremoto", "tsunami", "vulcano", "disastri naturali", "sopravvivenza"],
             en: ["catastrophe", "disaster", "end of the world", "earthquake", "tsunami", "volcano", "natural disaster", "survival"],
             es: ["catástrofe", "desastre", "fin del mundo", "terremoto", "tsunami", "volcán", "desastre natural", "supervivencia"]
-          }, keywords: "2333|12586|156066|155254|10484|1604|161042" },
+          }, keywords: "2333|12586|156066|155254|10484|1604|161042",
+          intro: {
+            it: "Terremoti, tsunami, vulcani e la fine del mondo come la conosciamo: film e serie di sopravvivenza pensati per chi ama vedere l'umanità messa alla prova da una catastrofe su scala globale.",
+            en: "Earthquakes, tsunamis, volcanoes and the end of the world as we know it: survival stories for anyone who likes seeing humanity tested by a global-scale catastrophe.",
+            es: "Terremotos, tsunamis, volcanes y el fin del mundo tal como lo conocemos: historias de supervivencia para quienes disfrutan viendo a la humanidad puesta a prueba."
+          } },
         { slug: "supereroi", labels: { it: "Supereroi", en: "Superheroes", es: "Superhéroes" }, emoji: "🦸",
           keysByLang: {
             it: ["supereroi", "super eroi", "super eroe", "vendicatori", "marvel", "dc"],
             en: ["superheroes", "super hero", "avengers", "marvel", "dc"],
             es: ["superhéroes", "vengadores", "marvel", "dc"]
-          }, keywords: "9715|180547" },
+          }, keywords: "9715|180547",
+          intro: {
+            it: "Poteri straordinari, universi condivisi e battaglie epiche: la selezione supereroi raccoglie i migliori titoli Marvel, DC e non solo per chi non si stanca mai di vedere il bene trionfare in grande stile.",
+            en: "Extraordinary powers, shared universes and epic battles: this superhero pick gathers the best Marvel, DC and beyond for anyone who never tires of good winning in style.",
+            es: "Poderes extraordinarios, universos compartidos y batallas épicas: esta selección reúne lo mejor de Marvel, DC y más para quienes nunca se cansan de ver ganar al bien."
+          } },
         { slug: "spazio", labels: { it: "Spazio", en: "Space", es: "Espacio" }, emoji: "🚀",
           keysByLang: {
             it: ["spazio", "alieni", "alieno", "ufo", "galassia", "interstellare", "astronave"],
             en: ["space", "aliens", "alien", "ufo", "galaxy", "interstellar", "spaceship"],
             es: ["espacio", "alienígenas", "extraterrestre", "ovni", "galaxia", "interestelar", "nave espacial"]
-          }, keywords: "3801|9882|9951|15255" },
+          }, keywords: "3801|9882|9951|15255",
+          intro: {
+            it: "Astronavi, galassie lontane e incontri con l'ignoto: una selezione per chi guarda il cielo e si chiede cosa c'è oltre, tra fantascienza pura e avventure interstellari.",
+            en: "Spaceships, distant galaxies and encounters with the unknown: a pick for anyone who looks at the sky and wonders what's out there, from hard sci-fi to interstellar adventure.",
+            es: "Naves espaciales, galaxias lejanas y encuentros con lo desconocido: una selección para quienes miran el cielo y se preguntan qué hay más allá."
+          } },
         { slug: "zombie", labels: { it: "Zombie", en: "Zombies", es: "Zombis" }, emoji: "🧟",
           keysByLang: {
             it: ["zombie", "morti viventi", "epidemia", "virus"],
             en: ["zombies", "undead", "outbreak", "virus"],
             es: ["zombis", "muertos vivientes", "epidemia", "virus"]
-          }, keywords: "12377|186671" },
+          }, keywords: "12377|186671",
+          intro: {
+            it: "Epidemie fuori controllo, morti viventi e umanità allo stremo: la selezione zombie è per chi ama il genere per la tensione della sopravvivenza tanto quanto per lo splatter.",
+            en: "Outbreaks spiraling out of control, the undead, and humanity pushed to the edge: this zombie pick is for fans of survival tension as much as the splatter.",
+            es: "Epidemias fuera de control, muertos vivientes y humanidad al límite: esta selección zombi es para quienes disfrutan tanto de la tensión de supervivencia como del gore."
+          } },
         { slug: "viaggi-nel-tempo", labels: { it: "Viaggi nel tempo", en: "Time Travel", es: "Viajes en el tiempo" }, emoji: "⏳",
           keysByLang: {
             it: ["viaggi nel tempo", "ritorno al futuro", "linea temporale"],
             en: ["time travel", "back to the future", "timeline"],
             es: ["viajes en el tiempo", "regreso al futuro", "línea temporal"]
-          }, keywords: "9840|11340" },
+          }, keywords: "9840|11340",
+          intro: {
+            it: "Paradossi temporali, linee temporali alternative e la domanda che non stanca mai: cosa succederebbe se potessi tornare indietro? Una selezione per chi ama i viaggi nel tempo ben scritti.",
+            en: "Time paradoxes, alternate timelines and the question that never gets old: what if you could go back? A pick for anyone who loves well-written time travel.",
+            es: "Paradojas temporales, líneas de tiempo alternativas y la pregunta que nunca cansa: ¿qué pasaría si pudieras volver atrás? Una selección para amantes de los viajes en el tiempo."
+          } },
         { slug: "giallo", labels: { it: "Giallo", en: "Mystery", es: "Misterio" }, emoji: "🕵️",
           keysByLang: {
             it: ["investigazione", "detective", "giallo", "poliziesco", "indagine", "noir"],
             en: ["investigation", "detective", "mystery", "crime", "whodunit", "noir"],
             es: ["investigación", "detective", "misterio", "policíaco", "noir"]
-          }, genre: 9648, keywords: "212|9826" },
+          }, genre: 9648, keywords: "212|9826",
+          intro: {
+            it: "Indizi, indagini e un colpevole da scoprire prima dei titoli di coda: la selezione giallo è per chi ama ricostruire il puzzle insieme al detective, un indizio alla volta.",
+            en: "Clues, investigations and a culprit to unmask before the credits roll: this mystery pick is for piecing the puzzle together alongside the detective, one clue at a time.",
+            es: "Pistas, investigaciones y un culpable por descubrir antes de los créditos: esta selección es para armar el rompecabezas junto al detective, pista a pista."
+          } },
         { slug: "storia-vera", labels: { it: "Storia vera", en: "True Story", es: "Historia real" }, emoji: "📖",
           keysByLang: {
             it: ["biografia", "storia vera", "biopic", "reale"],
             en: ["biography", "true story", "biopic", "based on real events"],
             es: ["biografía", "historia real", "biopic", "hechos reales"]
-          }, keywords: "5565|9672" },
+          }, keywords: "5565|9672",
+          intro: {
+            it: "Vite vissute, eventi realmente accaduti e biografie che raccontano più di un semplice romanzo: una selezione per chi trova le storie vere ancora più potenti di quelle inventate.",
+            en: "Real lives, events that actually happened, and biopics that hit harder than fiction: a pick for anyone who finds true stories even more powerful than invented ones.",
+            es: "Vidas reales, hechos que realmente ocurrieron y biopics que golpean más fuerte que la ficción: para quienes encuentran las historias reales aún más poderosas."
+          } },
         { slug: "cyberpunk", labels: { it: "Cyberpunk", en: "Cyberpunk", es: "Cyberpunk" }, emoji: "🤖",
           keysByLang: {
             it: ["cyberpunk", "tecnologia", "futuristico"],
             en: ["cyberpunk", "technology", "futuristic"],
             es: ["cyberpunk", "tecnología", "futurista"]
-          }, keywords: "290320|15250" },
+          }, keywords: "290320|15250",
+          intro: {
+            it: "Metropoli al neon, intelligenze artificiali e tecnologia che ha preso il sopravvento: la selezione cyberpunk è per chi ama il futuro immaginato come una città che non dorme mai.",
+            en: "Neon metropolises, artificial intelligence and technology gone too far: this cyberpunk pick is for anyone who imagines the future as a city that never sleeps.",
+            es: "Metrópolis de neón, inteligencias artificiales y tecnología fuera de control: esta selección cyberpunk es para quienes imaginan el futuro como una ciudad que nunca duerme."
+          } },
         { slug: "sport", labels: { it: "Sport", en: "Sports", es: "Deporte" }, emoji: "🏆",
           keysByLang: {
             it: ["sport", "calcio", "basket", "atleti", "gara"],
             en: ["sports", "soccer", "football", "basketball", "athletes", "competition"],
             es: ["deporte", "fútbol", "baloncesto", "atletas", "competición"]
-          }, keywords: "6075|5661" }
+          }, keywords: "6075|5661",
+          intro: {
+            it: "Rivalità, sacrificio e la voglia di vincere contro ogni pronostico: la selezione sport raccoglie storie di atleti e squadre pensate per chi si emoziona davanti a una vittoria conquistata sul campo.",
+            en: "Rivalry, sacrifice and the will to win against the odds: this sports pick gathers stories of athletes and teams for anyone who gets emotional over a victory earned on the field.",
+            es: "Rivalidad, sacrificio y ganas de ganar contra todo pronóstico: esta selección deportiva reúne historias de atletas y equipos para emocionarse con una victoria ganada en la cancha."
+          } }
     ];
 
     window.onload = () => {
@@ -2160,6 +2250,7 @@
             document.getElementById('sectionTitle').style.display = 'block';
             document.getElementById('homeAvatarRow').style.display = 'none';
             document.getElementById('sectionTitle').innerText = t('categoryTitle', {name: genreName});
+            document.getElementById('moodEditorial').style.display = 'none';
             window.scrollTo(0, 0);
         }
         isFetching = true;
@@ -2195,6 +2286,7 @@
         document.getElementById(mode === 'movie' ? 'homeBtn' : 'tvBtn').classList.add('active');
         document.getElementById('sortBarRow').style.display = 'none';
         document.getElementById('sectionTitle').style.display = 'none';
+        document.getElementById('moodEditorial').style.display = 'none';
         document.getElementById('movieGrid').innerHTML = '';
         document.getElementById('loadMoreBtn').style.display = 'none';
         document.getElementById('homeAvatarRow').style.display = 'flex';
@@ -2234,6 +2326,7 @@
         grid.innerHTML = '';
         document.getElementById('sortBarRow').style.display = 'none';
         document.getElementById('sectionTitle').style.display = 'none';
+        document.getElementById('moodEditorial').style.display = 'none';
         document.getElementById('loadMoreBtn').style.display = 'none';
         renderHeroBanner(pickHeroItem(trending));
 
@@ -2557,6 +2650,7 @@
         currentCategoryId = null;
         document.getElementById('homeAvatarRow').style.display = 'none';
         document.getElementById('sectionTitle').style.display = 'block';
+        document.getElementById('moodEditorial').style.display = 'none';
         document.getElementById('loading').style.display = 'block';
         let url;
         if (searchType === 'actor') {
@@ -2834,9 +2928,17 @@
                 updatePageMeta(meta.title, meta.description, meta.url);
                 const targetSearch = `?mood=${mood.slug}`;
                 if (location.search !== targetSearch) history.pushState({ mood: mood.slug }, '', targetSearch);
+                const editorialEl = document.getElementById('moodEditorial');
+                if (mood.intro && mood.intro[currentLang]) {
+                    editorialEl.textContent = mood.intro[currentLang];
+                    editorialEl.style.display = 'block';
+                } else {
+                    editorialEl.style.display = 'none';
+                }
             } else {
                 resetPageMeta();
                 if (location.search) history.replaceState({}, '', location.pathname);
+                document.getElementById('moodEditorial').style.display = 'none';
             }
 
             trackEvent('apply_mood_filters', {
@@ -3076,7 +3178,7 @@
     }
 
     async function getSimilar(id, title, type, append = false) {
-        if (!append) { closeModal(); page = 1; currentMovies = []; currentSimilarId = id; searchActive = false; document.getElementById('movieGrid').innerHTML = ''; document.getElementById('sectionTitle').style.display='block'; document.getElementById('sectionTitle').innerText = t('similarToTitle', {title: title}); document.getElementById('homeAvatarRow').style.display='none'; window.scrollTo(0,0); }
+        if (!append) { closeModal(); page = 1; currentMovies = []; currentSimilarId = id; searchActive = false; document.getElementById('movieGrid').innerHTML = ''; document.getElementById('sectionTitle').style.display='block'; document.getElementById('sectionTitle').innerText = t('similarToTitle', {title: title}); document.getElementById('moodEditorial').style.display='none'; document.getElementById('homeAvatarRow').style.display='none'; window.scrollTo(0,0); }
         if (activeFetchController) activeFetchController.abort();
         activeFetchController = new AbortController();
         isFetching = true;
@@ -3508,6 +3610,7 @@
         document.getElementById('loading').style.display = 'none';
         document.getElementById('sectionTitle').innerText = t('libraryTitle');
         document.getElementById('sectionTitle').style.display = 'block';
+        document.getElementById('moodEditorial').style.display = 'none';
         document.getElementById('sortBarRow').style.display = 'none';
         document.getElementById('homeAvatarRow').style.display = 'none';
         document.getElementById('loadMoreBtn').style.display = 'none';
@@ -3847,6 +3950,7 @@
         document.getElementById('loading').style.display = 'none';
         document.getElementById('sectionTitle').innerText = t('profileTitle');
         document.getElementById('sectionTitle').style.display = 'block';
+        document.getElementById('moodEditorial').style.display = 'none';
         document.getElementById('sortBarRow').style.display = 'none';
         document.getElementById('homeAvatarRow').style.display = 'none';
         document.getElementById('loadMoreBtn').style.display = 'none';
@@ -3938,8 +4042,9 @@
             <div class="wc-subsection-title"><i class="fa-solid fa-scale-balanced"></i> ${t('legalHeader')}</div>
             <div style="background: var(--card-bg); border-radius: 14px; padding: 16px; margin-bottom: 24px; display:flex; flex-direction:column; gap:10px;">
               <a href="chi-siamo.html" target="_blank" rel="noopener" style="color:#fff; font-size:0.85rem; font-weight:700; text-decoration:none;"><i class="fa-solid fa-circle-info" style="margin-right:8px; color:var(--primary);"></i>${t('aboutLink')}</a>
-              <a href="privacy.html" target="_blank" rel="noopener" style="color:#fff; font-size:0.85rem; font-weight:700; text-decoration:none;"><i class="fa-solid fa-file-shield" style="margin-right:8px; color:var(--primary);"></i>${t('privacyLink')}</a>
+              <a href="privacy.html" target="_blank" rel="noopener" style="color:#fff; font-size:0.85rem; font-weight:700; text-decoration:none;"><i class="fa-solid fa-lock" style="margin-right:8px; color:var(--primary);"></i>${t('privacyLink')}</a>
               <a href="privacy.html#affiliazione" target="_blank" rel="noopener" style="color:#fff; font-size:0.85rem; font-weight:700; text-decoration:none;"><i class="fa-solid fa-handshake" style="margin-right:8px; color:var(--primary);"></i>${t('affiliateDisclosureLink')}</a>
+              <a href="guide.html" target="_blank" rel="noopener" style="color:#fff; font-size:0.85rem; font-weight:700; text-decoration:none;"><i class="fa-solid fa-book-open" style="margin-right:8px; color:var(--primary);"></i>${t('guideLink')}</a>
               <p style="font-size:0.7rem; color:var(--text-dim); margin:6px 0 0; line-height:1.4;">${t('tmdbAttribution')}</p>
             </div>
             <div class="profile-actions">
