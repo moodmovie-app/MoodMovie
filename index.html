@@ -1463,7 +1463,12 @@
         // ogni #adSlot con il tuo blocco annuncio reale, es:
         // el.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4309387882525786" data-ad-slot="TUO_SLOT_ID" data-ad-format="auto"></ins>';
         // (adsbygoogle.js = window.adsbygoogle || []).push({});
-        document.querySelectorAll('.ad-slot').forEach(el => { el.style.display = 'flex'; el.textContent = t('adSlotPlaceholder'); });
+        //
+        // Disattivato finché AdSense non approva il sito (mostrare un riquadro vuoto con
+        // scritto "Spazio pubblicitario" non da un'immagine professionale). Quando lo stato
+        // su adsense.google.com passa a "Pronto"/"Autorizzato", scommenta la riga sotto
+        // (o meglio, sostituiscila con l'innerHTML del blocco annuncio reale come sopra).
+        // document.querySelectorAll('.ad-slot').forEach(el => { el.style.display = 'flex'; el.textContent = t('adSlotPlaceholder'); });
     }
 
     // ── LINK CONDIVISIBILI PER MOOD (SEO + condivisione social) ──
