@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -41,18 +44,18 @@
 <p>Non tutti i vincitori dell'Oscar per il Miglior Film hanno superato la prova del tempo allo stesso modo, ma alcuni sono diventati veri e propri classici, capaci di piacere ben oltre l'anno della premiazione. Questa classifica raccoglie i più significativi tra epoche diverse.</p>
 
 <ol class="rank-list">
-    <li><strong>Il Padrino</strong> — 1973, il vincitore diventato il metro di paragone di tutto il cinema successivo.</li>
-    <li><strong>Il Silenzio degli Innocenti</strong> — 1992, uno dei pochi horror/thriller a vincere il premio principale.</li>
-    <li><strong>Titanic</strong> — 1998, il kolossal romantico che ha eguagliato record di incassi e di statuette.</li>
-    <li><strong>Il Signore degli Anelli - Il ritorno del re</strong> — 2004, trionfo totale con 11 premi Oscar vinti.</li>
-    <li><strong>Non è un paese per vecchi</strong> — 2008, il thriller dei fratelli Coen ambientato nel Texas di confine.</li>
-    <li><strong>Spotlight</strong> — 2016, il racconto di un'inchiesta giornalistica che ha cambiato la Chiesa cattolica.</li>
-    <li><strong>Moonlight</strong> — 2017, un dramma intimo su identità e crescita diventato un caso culturale.</li>
-    <li><strong>Parasite</strong> — 2020, primo film non in lingua inglese a vincere il premio principale.</li>
-    <li><strong>Nomadland</strong> — 2021, un ritratto della working class americana on the road.</li>
-    <li><strong>CODA - I segni del cuore</strong> — 2022, la storia di una famiglia sorda raccontata con grande delicatezza.</li>
-    <li><strong>Everything Everywhere All at Once</strong> — 2023, multiverso e commedia esistenziale premiati con 7 statuette.</li>
-    <li><strong>Oppenheimer</strong> — 2024, il biopic di Christopher Nolan sul padre della bomba atomica.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/gemuM3FvVaWSEBrfk6nVFIOBhBY.jpg" alt="Poster di Il Padrino" loading="lazy"><span class="rank-text"><strong>Il Padrino</strong> — 1973, il vincitore diventato il metro di paragone di tutto il cinema successivo.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/atl34CKeaKGONBdyhbIweutyZjX.jpg" alt="Poster di Il Silenzio degli Innocenti" loading="lazy"><span class="rank-text"><strong>Il Silenzio degli Innocenti</strong> — 1992, uno dei pochi horror/thriller a vincere il premio principale.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/i87I2HPumcMkX5Vl48n2XkS5Os7.jpg" alt="Poster di Titanic" loading="lazy"><span class="rank-text"><strong>Titanic</strong> — 1998, il kolossal romantico che ha eguagliato record di incassi e di statuette.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/eCua9No8HqVxGajDQrG8mvRCtJM.jpg" alt="Poster di Il Signore degli Anelli - Il ritorno del re" loading="lazy"><span class="rank-text"><strong>Il Signore degli Anelli - Il ritorno del re</strong> — 2004, trionfo totale con 11 premi Oscar vinti.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/2zbXKL34bwaZ2gBygwoDE8DXHs7.jpg" alt="Poster di Non è un paese per vecchi" loading="lazy"><span class="rank-text"><strong>Non è un paese per vecchi</strong> — 2008, il thriller dei fratelli Coen ambientato nel Texas di confine.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/EFafxF3rdwTdZaUCMNvOFjMdPx.jpg" alt="Poster di Spotlight" loading="lazy"><span class="rank-text"><strong>Spotlight</strong> — 2016, il racconto di un'inchiesta giornalistica che ha cambiato la Chiesa cattolica.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/qybVLnqnQpiusfhfoUM7TFHdVhu.jpg" alt="Poster di Moonlight" loading="lazy"><span class="rank-text"><strong>Moonlight</strong> — 2017, un dramma intimo su identità e crescita diventato un caso culturale.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/mMM8kcfspicib7AmPTvf97Rarwn.jpg" alt="Poster di Parasite" loading="lazy"><span class="rank-text"><strong>Parasite</strong> — 2020, primo film non in lingua inglese a vincere il premio principale.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/6zypbz7DHNRU24AKw4oOyLkqiGo.jpg" alt="Poster di Nomadland" loading="lazy"><span class="rank-text"><strong>Nomadland</strong> — 2021, un ritratto della working class americana on the road.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/t1E8EQPNVMUYenp3mn7vs2nBvnh.jpg" alt="Poster di CODA - I segni del cuore" loading="lazy"><span class="rank-text"><strong>CODA - I segni del cuore</strong> — 2022, la storia di una famiglia sorda raccontata con grande delicatezza.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/4YF4QREw9vUjJSvzypd5uvpDxcT.jpg" alt="Poster di Everything Everywhere All at Once" loading="lazy"><span class="rank-text"><strong>Everything Everywhere All at Once</strong> — 2023, multiverso e commedia esistenziale premiati con 7 statuette.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/fRtaxfyynWMJI6DhejyA6JOzVTB.jpg" alt="Poster di Oppenheimer" loading="lazy"><span class="rank-text"><strong>Oppenheimer</strong> — 2024, il biopic di Christopher Nolan sul padre della bomba atomica.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/">Scopri altri titoli premiati su MoodMovie →</a>

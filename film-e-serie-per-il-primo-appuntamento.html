@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -41,14 +44,14 @@
 <p>Un primo appuntamento davanti a uno schermo ha bisogno di titoli precisi: niente drammi troppo pesanti, niente horror che possano mettere a disagio, ma qualcosa di abbastanza coinvolgente da dare spunti di conversazione. Ecco una selezione pensata apposta.</p>
 
 <ol class="rank-list">
-    <li><strong>Harry ti presento Sally</strong> — il capostipite della rom-com moderna, ancora oggi un riferimento del genere.</li>
-    <li><strong>La La Land</strong> — musica, ambizione e una storia d'amore agrodolce ambientata a Los Angeles.</li>
-    <li><strong>Notting Hill</strong> — una commedia romantica britannica diventata un classico del genere.</li>
-    <li><strong>500 giorni insieme</strong> — una storia d'amore raccontata fuori ordine cronologico, meno scontata del solito.</li>
-    <li><strong>Crazy Rich Asians</strong> — commedia romantica patinata ambientata nell'alta società di Singapore.</li>
-    <li><strong>Le pagine della nostra vita</strong> — uno dei drammi romantici più citati degli anni 2000.</li>
-    <li><strong>Orgoglio e Pregiudizio (2005)</strong> — l'adattamento di Jane Austen con Keira Knightley, elegante e accessibile.</li>
-    <li><strong>About Time</strong> — una commedia romantica sui viaggi nel tempo, perfetta per alleggerire la serata.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/9FntiimMchiZBjuklFfMuIinRnC.jpg" alt="Poster di Harry ti presento Sally" loading="lazy"><span class="rank-text"><strong>Harry ti presento Sally</strong> — il capostipite della rom-com moderna, ancora oggi un riferimento del genere.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/cAXvbX89nMYjtsOO76eFoT2vCSN.jpg" alt="Poster di La La Land" loading="lazy"><span class="rank-text"><strong>La La Land</strong> — musica, ambizione e una storia d'amore agrodolce ambientata a Los Angeles.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/6GDBcpQNtRAKHajRoeBj10pMNIX.jpg" alt="Poster di Notting Hill" loading="lazy"><span class="rank-text"><strong>Notting Hill</strong> — una commedia romantica britannica diventata un classico del genere.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/qLVPGfSoxX8rfncsTUep951b8M7.jpg" alt="Poster di 500 giorni insieme" loading="lazy"><span class="rank-text"><strong>500 giorni insieme</strong> — una storia d'amore raccontata fuori ordine cronologico, meno scontata del solito.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/1XxL4LJ5WHdrcYcihEZUCgNCpAW.jpg" alt="Poster di Crazy Rich Asians" loading="lazy"><span class="rank-text"><strong>Crazy Rich Asians</strong> — commedia romantica patinata ambientata nell'alta società di Singapore.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/pu5Q3YuYgSkfkVIdkChJVZjAaI5.jpg" alt="Poster di Le pagine della nostra vita" loading="lazy"><span class="rank-text"><strong>Le pagine della nostra vita</strong> — uno dei drammi romantici più citati degli anni 2000.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/bA4gEvNLIpwVV1JaU4S4yueLjP8.jpg" alt="Poster di Orgoglio e Pregiudizio (2005)" loading="lazy"><span class="rank-text"><strong>Orgoglio e Pregiudizio (2005)</strong> — l'adattamento di Jane Austen con Keira Knightley, elegante e accessibile.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/3d8p9ZttmLS0HFl3F4RlgP8GzJT.jpg" alt="Poster di About Time" loading="lazy"><span class="rank-text"><strong>About Time</strong> — una commedia romantica sui viaggi nel tempo, perfetta per alleggerire la serata.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/?mood=romantico">Guarda i film romantici su MoodMovie →</a>

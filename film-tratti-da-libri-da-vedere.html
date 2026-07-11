@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -41,16 +44,16 @@
 <p>Non tutti gli adattamenti letterari riescono a reggere il confronto con il libro d'origine, ma alcuni sono riusciti a diventare grandi film a prescindere, arricchendo o reinterpretando il materiale di partenza. Questa classifica raccoglie i casi più riusciti.</p>
 
 <ol class="rank-list">
-    <li><strong>Il Signore degli Anelli (trilogia)</strong> — dai romanzi di J.R.R. Tolkien, uno degli adattamenti fantasy più fedeli e ambiziosi mai realizzati.</li>
-    <li><strong>Harry Potter (saga)</strong> — otto film tratti dai romanzi di J.K. Rowling, capaci di crescere insieme al loro pubblico.</li>
-    <li><strong>Il Padrino</strong> — dal romanzo di Mario Puzo, un caso raro in cui il film ha superato in fama il libro.</li>
-    <li><strong>Shining</strong> — Stephen King e Stanley Kubrick, un adattamento tanto discusso dall'autore quanto amato dal pubblico.</li>
-    <li><strong>Le ali della libertà</strong> — da un racconto breve dello stesso Stephen King, tra gli adattamenti più riusciti in assoluto.</li>
-    <li><strong>Dune</strong> — dal romanzo di Frank Herbert, un'opera considerata a lungo 'inadattabile' prima della trasposizione recente.</li>
-    <li><strong>Il Diavolo veste Prada</strong> — dal romanzo di Lauren Weisberger, ispirato al mondo della moda newyorkese.</li>
-    <li><strong>Gone Girl - L'amore bugiardo</strong> — dal romanzo di Gillian Flynn, che ne ha firmato anche la sceneggiatura.</li>
-    <li><strong>The Martian - Sopravvissuto</strong> — dal romanzo di Andy Weir, fedele al tono scientifico e ironico dell'originale.</li>
-    <li><strong>Fight Club</strong> — dal romanzo di Chuck Palahniuk, con un finale diventato ancora più iconico del libro.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/eCua9No8HqVxGajDQrG8mvRCtJM.jpg" alt="Poster di Il Signore degli Anelli (trilogia)" loading="lazy"><span class="rank-text"><strong>Il Signore degli Anelli (trilogia)</strong> — dai romanzi di J.R.R. Tolkien, uno degli adattamenti fantasy più fedeli e ambiziosi mai realizzati.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/4PBGbvbZKYBuTv5segH7i96sl9X.jpg" alt="Poster di Harry Potter (saga)" loading="lazy"><span class="rank-text"><strong>Harry Potter (saga)</strong> — otto film tratti dai romanzi di J.K. Rowling, capaci di crescere insieme al loro pubblico.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/gemuM3FvVaWSEBrfk6nVFIOBhBY.jpg" alt="Poster di Il Padrino" loading="lazy"><span class="rank-text"><strong>Il Padrino</strong> — dal romanzo di Mario Puzo, un caso raro in cui il film ha superato in fama il libro.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/shTUOizWjurXOl5Bp2riMvSNIbZ.jpg" alt="Poster di Shining" loading="lazy"><span class="rank-text"><strong>Shining</strong> — Stephen King e Stanley Kubrick, un adattamento tanto discusso dall'autore quanto amato dal pubblico.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/9OxcvTJwZDjQTFvY2NxiwnSrQS6.jpg" alt="Poster di Le ali della libertà" loading="lazy"><span class="rank-text"><strong>Le ali della libertà</strong> — da un racconto breve dello stesso Stephen King, tra gli adattamenti più riusciti in assoluto.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/zolKD2yscZd86GviNa6pBPc6N9o.jpg" alt="Poster di Dune" loading="lazy"><span class="rank-text"><strong>Dune</strong> — dal romanzo di Frank Herbert, un'opera considerata a lungo 'inadattabile' prima della trasposizione recente.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/34r7kwVQh9UDGgAkA1EBDUWn7Sx.jpg" alt="Poster di Il Diavolo veste Prada" loading="lazy"><span class="rank-text"><strong>Il Diavolo veste Prada</strong> — dal romanzo di Lauren Weisberger, ispirato al mondo della moda newyorkese.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/6VHGi1nlslwztqGOCrlQlNvell2.jpg" alt="Poster di Gone Girl - L'amore bugiardo" loading="lazy"><span class="rank-text"><strong>Gone Girl - L'amore bugiardo</strong> — dal romanzo di Gillian Flynn, che ne ha firmato anche la sceneggiatura.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/ic1Ojv8jurZn4dFywHPBrvXMduf.jpg" alt="Poster di The Martian - Sopravvissuto" loading="lazy"><span class="rank-text"><strong>The Martian - Sopravvissuto</strong> — dal romanzo di Andy Weir, fedele al tono scientifico e ironico dell'originale.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/rtNLQ8HbPElzEfrHjrzSr07prKT.jpg" alt="Poster di Fight Club" loading="lazy"><span class="rank-text"><strong>Fight Club</strong> — dal romanzo di Chuck Palahniuk, con un finale diventato ancora più iconico del libro.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/">Scopri gli adattamenti disponibili su MoodMovie →</a>

@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -41,16 +44,16 @@
 <p>L'animazione non è un genere per bambini: è una tecnica, e negli ultimi vent'anni ha prodotto alcuni dei film più originali in assoluto, spesso più maturi di molte produzioni live-action. Questa classifica mette insieme titoli pensati per famiglie e opere rivolte esplicitamente a un pubblico adulto.</p>
 
 <ol class="rank-list">
-    <li><strong>Spider-Man: Un nuovo universo</strong> — ha ridefinito lo stile visivo dell'animazione occidentale mescolando fumetto e CGI.</li>
-    <li><strong>La città incantata</strong> — il capolavoro di Miyazaki su crescita e identità, tra i più amati dello Studio Ghibli.</li>
-    <li><strong>Your Name</strong> — un body-swap romantico giapponese diventato un fenomeno globale.</li>
-    <li><strong>Coco</strong> — vedi anche la classifica sui film per famiglie: qui per la cura visiva del mondo dei morti.</li>
-    <li><strong>Inside Out</strong> — le emozioni come personaggi, con un secondo capitolo altrettanto apprezzato.</li>
-    <li><strong>Klaus</strong> — un'origin story di Babbo Natale con un'animazione a luci che ha fatto scuola.</li>
-    <li><strong>Soul</strong> — jazz, senso della vita e una delle riflessioni più mature mai fatte da un film Pixar.</li>
-    <li><strong>Persepolis</strong> — l'infanzia in Iran durante la rivoluzione, raccontata in un bianco e nero toccante.</li>
-    <li><strong>Valzer con Bashir</strong> — documentario animato sulla guerra del Libano, esplicitamente per adulti.</li>
-    <li><strong>WALL-E</strong> — quasi senza dialoghi, uno dei film più eleganti mai realizzati sull'ambiente e la solitudine.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/ps86PNqw9qCEA9eJD53t6RuiCkW.jpg" alt="Poster di Spider-Man: Un nuovo universo" loading="lazy"><span class="rank-text"><strong>Spider-Man: Un nuovo universo</strong> — ha ridefinito lo stile visivo dell'animazione occidentale mescolando fumetto e CGI.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/3PV6lq9BNmoyyDXr5tdNeeESEMn.jpg" alt="Poster di La città incantata" loading="lazy"><span class="rank-text"><strong>La città incantata</strong> — il capolavoro di Miyazaki su crescita e identità, tra i più amati dello Studio Ghibli.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/uyOd5E0dNTp2AJAJWv0V3asf31u.jpg" alt="Poster di Your Name" loading="lazy"><span class="rank-text"><strong>Your Name</strong> — un body-swap romantico giapponese diventato un fenomeno globale.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/l5qUox5uroubMi8sihD9RGPbcwO.jpg" alt="Poster di Coco" loading="lazy"><span class="rank-text"><strong>Coco</strong> — vedi anche la classifica sui film per famiglie: qui per la cura visiva del mondo dei morti.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/gsylhwWIeQwX3s2zmjLQuBLlleX.jpg" alt="Poster di Inside Out" loading="lazy"><span class="rank-text"><strong>Inside Out</strong> — le emozioni come personaggi, con un secondo capitolo altrettanto apprezzato.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/5u38V38eaIkGXAa4gyVHNUfAU4Z.jpg" alt="Poster di Klaus" loading="lazy"><span class="rank-text"><strong>Klaus</strong> — un'origin story di Babbo Natale con un'animazione a luci che ha fatto scuola.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/jrEPxF3YZvYa8f0H0Lp3Ph6z4xK.jpg" alt="Poster di Soul" loading="lazy"><span class="rank-text"><strong>Soul</strong> — jazz, senso della vita e una delle riflessioni più mature mai fatte da un film Pixar.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/dUvdyb2rkChGjDJELiuMXpChsqg.jpg" alt="Poster di Persepolis" loading="lazy"><span class="rank-text"><strong>Persepolis</strong> — l'infanzia in Iran durante la rivoluzione, raccontata in un bianco e nero toccante.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/d6knZ8YiFtWSLgbAFLKkijzeJAk.jpg" alt="Poster di Valzer con Bashir" loading="lazy"><span class="rank-text"><strong>Valzer con Bashir</strong> — documentario animato sulla guerra del Libano, esplicitamente per adulti.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/1ZkFCJwN6hNUdNZUIUCeugja06j.jpg" alt="Poster di WALL-E" loading="lazy"><span class="rank-text"><strong>WALL-E</strong> — quasi senza dialoghi, uno dei film più eleganti mai realizzati sull'ambiente e la solitudine.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/">Scopri i titoli d'animazione su MoodMovie →</a>

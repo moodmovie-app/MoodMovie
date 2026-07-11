@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -41,16 +44,16 @@
 <p>Non tutte le giornate no richiedono un film drammatico per essere elaborate: a volte la scelta migliore è l'opposto, qualcosa di leggero, caldo e ottimista che rimetta di buon umore senza sforzo. Questi titoli sono pensati esattamente per quei momenti.</p>
 
 <ol class="rank-list">
-    <li><strong>Amélie</strong> — un'ode alla gentilezza quotidiana e ai piccoli gesti, girata con uno stile inconfondibile.</li>
-    <li><strong>Little Miss Sunshine</strong> — una famiglia disfunzionale on the road, tra le commedie più calde degli anni 2000.</li>
-    <li><strong>Sing Street</strong> — musica anni '80 e formazione di una band, tra i film feel-good più sottovalutati.</li>
-    <li><strong>Il fantastico mondo di Walter Mitty</strong> — un impiegato anonimo che finalmente vive le proprie fantasie di avventura.</li>
-    <li><strong>Chef</strong> — cucina, rapporto padre-figlio e la voglia di ricominciare da capo con leggerezza.</li>
-    <li><strong>Julie & Julia</strong> — due donne, due epoche, la stessa passione per la cucina francese.</li>
-    <li><strong>School of Rock</strong> — Jack Black nei panni di un insegnante improvvisato, puro buonumore.</li>
-    <li><strong>Pitch Perfect</strong> — cori universitari e commedia musicale spensierata.</li>
-    <li><strong>Grand Budapest Hotel</strong> — l'estetica coloratissima di Wes Anderson al servizio di una commedia agrodolce.</li>
-    <li><strong>About Time</strong> — una commedia romantica sui viaggi nel tempo con un messaggio finale molto più profondo del previsto.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/ugVnbzXJugaI83XHIvBNMsXnC35.jpg" alt="Poster di Amélie" loading="lazy"><span class="rank-text"><strong>Amélie</strong> — un'ode alla gentilezza quotidiana e ai piccoli gesti, girata con uno stile inconfondibile.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/8hDJ0q76dW65SU6sYO3q5J4qbPU.jpg" alt="Poster di Little Miss Sunshine" loading="lazy"><span class="rank-text"><strong>Little Miss Sunshine</strong> — una famiglia disfunzionale on the road, tra le commedie più calde degli anni 2000.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/pjLzfbOQDOKSOa9JdfzpB3C8fTN.jpg" alt="Poster di Sing Street" loading="lazy"><span class="rank-text"><strong>Sing Street</strong> — musica anni '80 e formazione di una band, tra i film feel-good più sottovalutati.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/aBaLgOfwIbQCVq2honGloFOuj3r.jpg" alt="Poster di Il fantastico mondo di Walter Mitty" loading="lazy"><span class="rank-text"><strong>Il fantastico mondo di Walter Mitty</strong> — un impiegato anonimo che finalmente vive le proprie fantasie di avventura.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/vXjFOhoPBzqmghgyj3uhw6VK6qw.jpg" alt="Poster di Chef" loading="lazy"><span class="rank-text"><strong>Chef</strong> — cucina, rapporto padre-figlio e la voglia di ricominciare da capo con leggerezza.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/1QZNWOOwfRi86ZApGvr2TtJZPBK.jpg" alt="Poster di Julie & Julia" loading="lazy"><span class="rank-text"><strong>Julie & Julia</strong> — due donne, due epoche, la stessa passione per la cucina francese.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/wMR7jnZ4WjozimKS25Iyf6Ox2gp.jpg" alt="Poster di School of Rock" loading="lazy"><span class="rank-text"><strong>School of Rock</strong> — Jack Black nei panni di un insegnante improvvisato, puro buonumore.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/gsFoJk9g8W3zgaipRrrURk7LbiF.jpg" alt="Poster di Pitch Perfect" loading="lazy"><span class="rank-text"><strong>Pitch Perfect</strong> — cori universitari e commedia musicale spensierata.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/tY8gmrOOzhJxfBLQNOxjbuSR52b.jpg" alt="Poster di Grand Budapest Hotel" loading="lazy"><span class="rank-text"><strong>Grand Budapest Hotel</strong> — l'estetica coloratissima di Wes Anderson al servizio di una commedia agrodolce.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/3d8p9ZttmLS0HFl3F4RlgP8GzJT.jpg" alt="Poster di About Time" loading="lazy"><span class="rank-text"><strong>About Time</strong> — una commedia romantica sui viaggi nel tempo con un messaggio finale molto più profondo del previsto.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/?mood=divertente">Guarda le commedie selezionate su MoodMovie →</a>

@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -41,16 +44,16 @@
 <p>Trovare un film che piaccia davvero a tutta la famiglia, dai più piccoli agli adulti, non è scontato: serve un equilibrio tra intrattenimento immediato per i bambini e una scrittura abbastanza intelligente da non annoiare chi li accompagna sul divano. Questi titoli ci riescono.</p>
 
 <ol class="rank-list">
-    <li><strong>Toy Story (saga)</strong> — l'amicizia tra giocattoli che ha commosso più generazioni di spettatori.</li>
-    <li><strong>Alla ricerca di Nemo</strong> — un viaggio sottomarino che parla di paura e genitorialità in modo universale.</li>
-    <li><strong>Up</strong> — dieci minuti d'apertura tra i più commoventi della Pixar, seguiti da un'avventura leggera.</li>
-    <li><strong>Coco</strong> — un tributo alla tradizione messicana con una delle colonne sonore più amate degli ultimi anni.</li>
-    <li><strong>Encanto</strong> — una famiglia con poteri magici e un messaggio molto attuale su pressione familiare e aspettative.</li>
-    <li><strong>Paddington</strong> — gentilezza e umorismo british, raro esempio di family movie apprezzato anche dalla critica.</li>
-    <li><strong>Harry Potter (saga)</strong> — il punto d'ingresso perfetto per introdurre i più giovani al fantasy.</li>
-    <li><strong>Big Hero 6</strong> — supereroi, robotica e un rapporto tra fratelli che emoziona senza sdolcinature.</li>
-    <li><strong>Inside Out</strong> — le emozioni di una bambina raccontate in modo comprensibile a ogni età.</li>
-    <li><strong>Ratatouille</strong> — un topo che sogna di fare il cuoco, e una lezione su talento e pregiudizio.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/mBbYy8XgIFPmGmjIuXKCrOl0qwg.jpg" alt="Poster di Toy Story (saga)" loading="lazy"><span class="rank-text"><strong>Toy Story (saga)</strong> — l'amicizia tra giocattoli che ha commosso più generazioni di spettatori.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/oXs67sAZuZOtTGjLG0TL1KdqqpR.jpg" alt="Poster di Alla ricerca di Nemo" loading="lazy"><span class="rank-text"><strong>Alla ricerca di Nemo</strong> — un viaggio sottomarino che parla di paura e genitorialità in modo universale.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/j3Ga41uc0y3W8KbKjSfPHQiZYVn.jpg" alt="Poster di Up" loading="lazy"><span class="rank-text"><strong>Up</strong> — dieci minuti d'apertura tra i più commoventi della Pixar, seguiti da un'avventura leggera.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/l5qUox5uroubMi8sihD9RGPbcwO.jpg" alt="Poster di Coco" loading="lazy"><span class="rank-text"><strong>Coco</strong> — un tributo alla tradizione messicana con una delle colonne sonore più amate degli ultimi anni.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/hEsxBUSGR2HvIzjA2OS84GmoYVO.jpg" alt="Poster di Encanto" loading="lazy"><span class="rank-text"><strong>Encanto</strong> — una famiglia con poteri magici e un messaggio molto attuale su pressione familiare e aspettative.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/cWvCjn8PNN1wuAe7m7fABVhiWit.jpg" alt="Poster di Paddington" loading="lazy"><span class="rank-text"><strong>Paddington</strong> — gentilezza e umorismo british, raro esempio di family movie apprezzato anche dalla critica.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/4PBGbvbZKYBuTv5segH7i96sl9X.jpg" alt="Poster di Harry Potter (saga)" loading="lazy"><span class="rank-text"><strong>Harry Potter (saga)</strong> — il punto d'ingresso perfetto per introdurre i più giovani al fantasy.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/5BmP3oKqStYSPinFYKuJbHvxoA8.jpg" alt="Poster di Big Hero 6" loading="lazy"><span class="rank-text"><strong>Big Hero 6</strong> — supereroi, robotica e un rapporto tra fratelli che emoziona senza sdolcinature.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/gsylhwWIeQwX3s2zmjLQuBLlleX.jpg" alt="Poster di Inside Out" loading="lazy"><span class="rank-text"><strong>Inside Out</strong> — le emozioni di una bambina raccontate in modo comprensibile a ogni età.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/jvvkIggejEyiAMVfYiMJltEoJOr.jpg" alt="Poster di Ratatouille" loading="lazy"><span class="rank-text"><strong>Ratatouille</strong> — un topo che sogna di fare il cuoco, e una lezione su talento e pregiudizio.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/">Guarda il catalogo family su MoodMovie →</a>

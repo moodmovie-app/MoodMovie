@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -41,17 +44,17 @@
 <p>Il modo in cui guardiamo le serie TV è cambiato radicalmente negli ultimi vent'anni, e alcuni titoli sono stati il motore di questo cambiamento. Questa classifica raccoglie le serie che, per scrittura, regia o impatto culturale, sono diventate un riferimento imprescindibile.</p>
 
 <ol class="rank-list">
-    <li><strong>Breaking Bad</strong> — la trasformazione di un insegnante di chimica in boss della droga, tra le sceneggiature più premiate di sempre.</li>
-    <li><strong>Il Trono di Spade</strong> — fantasy politico su scala epica, capace di portare il genere fuori dalla nicchia.</li>
-    <li><strong>Chernobyl</strong> — la ricostruzione del disastro nucleare del 1986, tra le miniserie più acclamate degli ultimi anni.</li>
-    <li><strong>The Wire</strong> — il ritratto più realistico mai fatto di una città americana, tra crimine, politica e istituzioni.</li>
-    <li><strong>Stranger Things</strong> — nostalgia anni '80, mistero e amicizia, il fenomeno seriale globale per eccellenza.</li>
-    <li><strong>The Office</strong> — il mockumentary da ufficio diventato una delle comedy più citate di sempre.</li>
-    <li><strong>True Detective (stagione 1)</strong> — un noir filosofico che ha ridefinito cosa può essere un procedurale poliziesco.</li>
-    <li><strong>Better Call Saul</strong> — uno spin-off che molti considerano superiore alla serie madre.</li>
-    <li><strong>The Crown</strong> — decenni di storia della monarchia britannica raccontati con una cura produttiva rarissima.</li>
-    <li><strong>Peaky Blinders</strong> — eleganza, violenza e colonna sonora iconica nella Birmingham del primo Novecento.</li>
-    <li><strong>Black Mirror</strong> — antologia sul rapporto tra tecnologia e società, spesso profetica.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg" alt="Poster di Breaking Bad" loading="lazy"><span class="rank-text"><strong>Breaking Bad</strong> — la trasformazione di un insegnante di chimica in boss della droga, tra le sceneggiature più premiate di sempre.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/n4IxkaZanXQU89WNRxt8h1fw1yb.jpg" alt="Poster di Il Trono di Spade" loading="lazy"><span class="rank-text"><strong>Il Trono di Spade</strong> — fantasy politico su scala epica, capace di portare il genere fuori dalla nicchia.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg" alt="Poster di Chernobyl" loading="lazy"><span class="rank-text"><strong>Chernobyl</strong> — la ricostruzione del disastro nucleare del 1986, tra le miniserie più acclamate degli ultimi anni.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/4lbclFySvugI51fwsyxBTOm4DqK.jpg" alt="Poster di The Wire" loading="lazy"><span class="rank-text"><strong>The Wire</strong> — il ritratto più realistico mai fatto di una città americana, tra crimine, politica e istituzioni.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/wZNIKNMqjulcU1AbU6X98tHy9QF.jpg" alt="Poster di Stranger Things" loading="lazy"><span class="rank-text"><strong>Stranger Things</strong> — nostalgia anni '80, mistero e amicizia, il fenomeno seriale globale per eccellenza.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/7DJKHzAi83BmQrWLrYYOqcoKfhR.jpg" alt="Poster di The Office" loading="lazy"><span class="rank-text"><strong>The Office</strong> — il mockumentary da ufficio diventato una delle comedy più citate di sempre.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/dC7jkj2g1aU8sxKqM6D4g44xA6w.jpg" alt="Poster di True Detective (stagione 1)" loading="lazy"><span class="rank-text"><strong>True Detective (stagione 1)</strong> — un noir filosofico che ha ridefinito cosa può essere un procedurale poliziesco.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/zjg4jpK1Wp2kiRvtt5ND0kznako.jpg" alt="Poster di Better Call Saul" loading="lazy"><span class="rank-text"><strong>Better Call Saul</strong> — uno spin-off che molti considerano superiore alla serie madre.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/1M876KPjulVwppEpldhdc8V4o68.jpg" alt="Poster di The Crown" loading="lazy"><span class="rank-text"><strong>The Crown</strong> — decenni di storia della monarchia britannica raccontati con una cura produttiva rarissima.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg" alt="Poster di Peaky Blinders" loading="lazy"><span class="rank-text"><strong>Peaky Blinders</strong> — eleganza, violenza e colonna sonora iconica nella Birmingham del primo Novecento.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/seN6rRfN0I6n8iDXjlSMk1QjNcq.jpg" alt="Poster di Black Mirror" loading="lazy"><span class="rank-text"><strong>Black Mirror</strong> — antologia sul rapporto tra tecnologia e società, spesso profetica.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/">Scopri le serie TV disponibili ora su MoodMovie →</a>

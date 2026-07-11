@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -43,26 +46,26 @@
 <p>Non è un elenco di novità: sono film che hanno resistito al tempo, spesso rivisti a distanza di decenni con lo stesso impatto della prima volta.</p>
 
 <ol class="rank-list">
-    <li><strong>Il Padrino</strong> — il capostipite del cinema sulla mafia, ancora oggi il metro di paragone del genere.</li>
-    <li><strong>Le ali della libertà</strong> — una storia di speranza e amicizia dentro un carcere, spesso citata come il film più amato di sempre.</li>
-    <li><strong>Pulp Fiction</strong> — la struttura non lineare e i dialoghi di Tarantino hanno cambiato il modo di scrivere sceneggiature.</li>
-    <li><strong>Forrest Gump</strong> — mezzo secolo di storia americana raccontato attraverso gli occhi di un uomo semplice.</li>
-    <li><strong>Il Signore degli Anelli - Il ritorno del re</strong> — l'apice di una trilogia fantasy che ha ridefinito gli effetti speciali al cinema.</li>
-    <li><strong>Schindler's List</strong> — uno dei racconti più potenti sull'Olocausto mai portati sullo schermo.</li>
-    <li><strong>Il Cavaliere Oscuro</strong> — il film che ha reso i cinecomic un genere da prendere sul serio.</li>
-    <li><strong>Fight Club</strong> — una critica feroce al consumismo, con un finale ancora oggi discusso.</li>
-    <li><strong>Interstellar</strong> — scienza, tempo e amore familiare in un viaggio ai confini dell'universo.</li>
-    <li><strong>Whiplash</strong> — la storia di un batterista e del suo insegnante spietato, tesissima dal primo all'ultimo minuto.</li>
-    <li><strong>Parasite</strong> — il primo film non in lingua inglese a vincere l'Oscar come miglior film, e si vede perché.</li>
-    <li><strong>Il Silenzio degli Innocenti</strong> — il thriller psicologico che ha reso Hannibal Lecter un'icona.</li>
-    <li><strong>Quei bravi ragazzi</strong> — il ritratto definitivo della criminalità organizzata secondo Scorsese.</li>
-    <li><strong>Matrix</strong> — ha ridefinito il cinema d'azione e il modo di girare le scene di combattimento.</li>
-    <li><strong>Titanic</strong> — il kolossal romantico che ha tenuto il record d'incassi per oltre un decennio.</li>
-    <li><strong>Il Gladiatore</strong> — epica romana, vendetta e uno dei personaggi più iconici del cinema action.</li>
-    <li><strong>Léon</strong> — un sicario solitario e una bambina orfana, uno dei drammi d'azione più amati degli anni '90.</li>
-    <li><strong>C'era una volta in America</strong> — l'affresco definitivo di Sergio Leone su amicizia e tradimento.</li>
-    <li><strong>Il Truman Show</strong> — una profezia su televisione e società dello spettacolo arrivata con decenni d'anticipo.</li>
-    <li><strong>La vita è bella</strong> — la tragedia della Shoah raccontata attraverso gli occhi di un padre che protegge suo figlio.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/gemuM3FvVaWSEBrfk6nVFIOBhBY.jpg" alt="Poster di Il Padrino" loading="lazy"><span class="rank-text"><strong>Il Padrino</strong> — il capostipite del cinema sulla mafia, ancora oggi il metro di paragone del genere.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/9OxcvTJwZDjQTFvY2NxiwnSrQS6.jpg" alt="Poster di Le ali della libertà" loading="lazy"><span class="rank-text"><strong>Le ali della libertà</strong> — una storia di speranza e amicizia dentro un carcere, spesso citata come il film più amato di sempre.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/hOpN58hkQGZph5LHhyRrryy1hzF.jpg" alt="Poster di Pulp Fiction" loading="lazy"><span class="rank-text"><strong>Pulp Fiction</strong> — la struttura non lineare e i dialoghi di Tarantino hanno cambiato il modo di scrivere sceneggiature.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/gsbmOBQKIzO3q57pITk9Ol4urV2.jpg" alt="Poster di Forrest Gump" loading="lazy"><span class="rank-text"><strong>Forrest Gump</strong> — mezzo secolo di storia americana raccontato attraverso gli occhi di un uomo semplice.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/eCua9No8HqVxGajDQrG8mvRCtJM.jpg" alt="Poster di Il Signore degli Anelli - Il ritorno del re" loading="lazy"><span class="rank-text"><strong>Il Signore degli Anelli - Il ritorno del re</strong> — l'apice di una trilogia fantasy che ha ridefinito gli effetti speciali al cinema.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/9SiPeJ9Wf2MoUdzUskaw5OrRV4V.jpg" alt="Poster di Schindler's List" loading="lazy"><span class="rank-text"><strong>Schindler's List</strong> — uno dei racconti più potenti sull'Olocausto mai portati sullo schermo.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/qIhsgno1mjbzUbs4H6DaRjhskAR.jpg" alt="Poster di Il Cavaliere Oscuro" loading="lazy"><span class="rank-text"><strong>Il Cavaliere Oscuro</strong> — il film che ha reso i cinecomic un genere da prendere sul serio.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/rtNLQ8HbPElzEfrHjrzSr07prKT.jpg" alt="Poster di Fight Club" loading="lazy"><span class="rank-text"><strong>Fight Club</strong> — una critica feroce al consumismo, con un finale ancora oggi discusso.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/bMKiLh0mES4Uiococ240lbbTGXQ.jpg" alt="Poster di Interstellar" loading="lazy"><span class="rank-text"><strong>Interstellar</strong> — scienza, tempo e amore familiare in un viaggio ai confini dell'universo.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/jQwkXN38AGrK2s3LJqxZow1Ic7z.jpg" alt="Poster di Whiplash" loading="lazy"><span class="rank-text"><strong>Whiplash</strong> — la storia di un batterista e del suo insegnante spietato, tesissima dal primo all'ultimo minuto.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/mMM8kcfspicib7AmPTvf97Rarwn.jpg" alt="Poster di Parasite" loading="lazy"><span class="rank-text"><strong>Parasite</strong> — il primo film non in lingua inglese a vincere l'Oscar come miglior film, e si vede perché.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/atl34CKeaKGONBdyhbIweutyZjX.jpg" alt="Poster di Il Silenzio degli Innocenti" loading="lazy"><span class="rank-text"><strong>Il Silenzio degli Innocenti</strong> — il thriller psicologico che ha reso Hannibal Lecter un'icona.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/7Ce724ZcEt7Id9EwBFFdXuvDxWA.jpg" alt="Poster di Quei bravi ragazzi" loading="lazy"><span class="rank-text"><strong>Quei bravi ragazzi</strong> — il ritratto definitivo della criminalità organizzata secondo Scorsese.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/yQZX4scmfYtj4ccKFNGZJlOj1y9.jpg" alt="Poster di Matrix" loading="lazy"><span class="rank-text"><strong>Matrix</strong> — ha ridefinito il cinema d'azione e il modo di girare le scene di combattimento.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/i87I2HPumcMkX5Vl48n2XkS5Os7.jpg" alt="Poster di Titanic" loading="lazy"><span class="rank-text"><strong>Titanic</strong> — il kolossal romantico che ha tenuto il record d'incassi per oltre un decennio.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/euOKjQaV1QXtzLyNZAa1PMHGJlJ.jpg" alt="Poster di Il Gladiatore" loading="lazy"><span class="rank-text"><strong>Il Gladiatore</strong> — epica romana, vendetta e uno dei personaggi più iconici del cinema action.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/sTBexa0IBzInZHg4HdzugQCWNuZ.jpg" alt="Poster di Léon" loading="lazy"><span class="rank-text"><strong>Léon</strong> — un sicario solitario e una bambina orfana, uno dei drammi d'azione più amati degli anni '90.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/A0Va4hHmMfuU6WPIIeSXFUl5gjN.jpg" alt="Poster di C'era una volta in America" loading="lazy"><span class="rank-text"><strong>C'era una volta in America</strong> — l'affresco definitivo di Sergio Leone su amicizia e tradimento.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/vniJPHHUpjdVPTSGxn6b3z93nyK.jpg" alt="Poster di Il Truman Show" loading="lazy"><span class="rank-text"><strong>Il Truman Show</strong> — una profezia su televisione e società dello spettacolo arrivata con decenni d'anticipo.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/Moz0CzJ44U9L3ADxlVE24LTwY4.jpg" alt="Poster di La vita è bella" loading="lazy"><span class="rank-text"><strong>La vita è bella</strong> — la tragedia della Shoah raccontata attraverso gli occhi di un padre che protegge suo figlio.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/">Scopri cosa guardare ora su MoodMovie →</a>

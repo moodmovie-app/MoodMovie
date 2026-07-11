@@ -24,12 +24,15 @@
     .cta-btn { display:inline-block; margin: 22px 0 8px; background: linear-gradient(135deg, #ff3b52 0%, #e50914 55%, #b3070f 100%); color:#fff !important; font-weight:700; text-decoration:none; padding: 14px 24px; border-radius: 16px; font-size:0.95rem; }
     .related { margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.09); }
     .related a { display:block; margin: 6px 0; font-size:0.88rem; }
-    ol.rank-list { padding-left: 22px; margin: 18px 0; }
-    ol.rank-list li { margin-bottom: 10px; }
+    ol.rank-list { padding-left: 22px; margin: 18px 0; list-style-position: outside; }
+    ol.rank-list li { margin-bottom: 16px; display: flex; gap: 14px; align-items: flex-start; }
     ol.rank-list strong { color: #fff; }
+    ol.rank-list img { width: 56px; height: 84px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: #14141b; }
+    ol.rank-list .rank-text { flex: 1; padding-top: 2px; }
     .fact-row { display:flex; flex-wrap:wrap; gap: 10px 22px; margin: 18px 0 6px; padding: 14px 16px; background:#14141b; border:1px solid rgba(255,255,255,0.09); border-radius:14px; }
     .fact-row div { font-size:0.82rem; }
     .fact-row b { color:#fff; display:block; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.5px; color:#9b9ba8; margin-bottom:2px; }
+    .poster-hero { width: 160px; max-width: 40%; border-radius: 16px; display: block; margin: 4px 0 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 </style>
 </head>
 <body>
@@ -41,16 +44,16 @@
 <p>Alcune serie sono scritte apposta per non staccarsi dallo schermo: episodi che finiscono con un cliffhanger, ritmo serrato e trame orizzontali che ricompensano chi guarda più puntate di fila. Ecco una selezione pensata proprio per una maratona.</p>
 
 <ol class="rank-list">
-    <li><strong>Stranger Things</strong> — mistero, nostalgia anni '80 e un ritmo che rende difficile fermarsi a un solo episodio.</li>
-    <li><strong>Squid Game</strong> — il fenomeno coreano diventato virale globalmente proprio per la sua tensione crescente.</li>
-    <li><strong>La casa di carta</strong> — rapine, colpi di scena e un formato a stagioni pensato per il binge.</li>
-    <li><strong>You</strong> — un thriller psicologico con un protagonista inquietante e episodi da 45 minuti perfetti per continuare.</li>
-    <li><strong>Wednesday</strong> — mistero scolastico in salsa Addams Family, leggero ma con una trama che invoglia a proseguire.</li>
-    <li><strong>Dark</strong> — viaggi nel tempo tedeschi con una struttura talmente intricata da spingere a guardare più episodi insieme.</li>
-    <li><strong>Mindhunter</strong> — il procedurale sui serial killer degli anni '70/'80, teso e claustrofobico.</li>
-    <li><strong>Ozark</strong> — riciclaggio di denaro e tensione familiare crescente stagione dopo stagione.</li>
-    <li><strong>The Queen's Gambit</strong> — scacchi e dipendenze raccontati con un ritmo quasi da thriller.</li>
-    <li><strong>Sex Education</strong> — commedia adolescenziale con episodi brevi, perfetti per una maratona leggera.</li>
+    <li><img src="https://image.tmdb.org/t/p/w185/wZNIKNMqjulcU1AbU6X98tHy9QF.jpg" alt="Poster di Stranger Things" loading="lazy"><span class="rank-text"><strong>Stranger Things</strong> — mistero, nostalgia anni '80 e un ritmo che rende difficile fermarsi a un solo episodio.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/nW5rupC5zMeAGgGBYXkr8JL8Xq7.jpg" alt="Poster di Squid Game" loading="lazy"><span class="rank-text"><strong>Squid Game</strong> — il fenomeno coreano diventato virale globalmente proprio per la sua tensione crescente.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/u1RSyTfhoKBMlVqXfoEzGldlDtL.jpg" alt="Poster di La casa di carta" loading="lazy"><span class="rank-text"><strong>La casa di carta</strong> — rapine, colpi di scena e un formato a stagioni pensato per il binge.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/oANi0vEE92nuijiZQgPZ88FSxqQ.jpg" alt="Poster di You" loading="lazy"><span class="rank-text"><strong>You</strong> — un thriller psicologico con un protagonista inquietante e episodi da 45 minuti perfetti per continuare.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/sci4aAuTCWQsIs2uo7LoZVtMdD0.jpg" alt="Poster di Wednesday" loading="lazy"><span class="rank-text"><strong>Wednesday</strong> — mistero scolastico in salsa Addams Family, leggero ma con una trama che invoglia a proseguire.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/budeAEqeWcspxOHcKA0prS669N0.jpg" alt="Poster di Dark" loading="lazy"><span class="rank-text"><strong>Dark</strong> — viaggi nel tempo tedeschi con una struttura talmente intricata da spingere a guardare più episodi insieme.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/fbKE87mojpIETWepSbD5Qt741fp.jpg" alt="Poster di Mindhunter" loading="lazy"><span class="rank-text"><strong>Mindhunter</strong> — il procedurale sui serial killer degli anni '70/'80, teso e claustrofobico.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/pCGyPVrI9Fzw6rE1Pvi4BIXF6ET.jpg" alt="Poster di Ozark" loading="lazy"><span class="rank-text"><strong>Ozark</strong> — riciclaggio di denaro e tensione familiare crescente stagione dopo stagione.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/2yiEKBcHbH8rghII7wARdYQCeQj.jpg" alt="Poster di The Queen's Gambit" loading="lazy"><span class="rank-text"><strong>The Queen's Gambit</strong> — scacchi e dipendenze raccontati con un ritmo quasi da thriller.</span></li>
+    <li><img src="https://image.tmdb.org/t/p/w185/pmwsSCcz8aZOJXsTTrNs8LzGMwt.jpg" alt="Poster di Sex Education" loading="lazy"><span class="rank-text"><strong>Sex Education</strong> — commedia adolescenziale con episodi brevi, perfetti per una maratona leggera.</span></li>
 </ol>
 
 <a class="cta-btn" href="https://moodmovie-app.github.io/?mood=thriller">Guarda le serie thriller su MoodMovie →</a>
