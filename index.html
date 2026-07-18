@@ -742,6 +742,17 @@
     <button id="loadMoreBtn" class="load-more-btn" onclick="loadMore()" data-i18n="loadMore">CARICA ALTRI</button>
 </div>
 
+<footer id="siteFooter" style="max-width:1400px; margin:36px auto 10px; padding:22px 20px 0; border-top:1px solid var(--border-soft);">
+    <p style="font-size:0.78rem; color:var(--text-dim); line-height:1.6; margin:0 0 16px; max-width:640px;" data-i18n="footerIntro">MoodMovie ti aiuta a trovare film e serie TV in base al mood del momento, con indicazione di dove guardarli legalmente in streaming. Scopri le nostre guide tematiche, le classifiche e le recensioni aggiornate.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:10px 22px;">
+        <a href="guide.html" style="color:var(--text-dim); font-size:0.74rem; font-weight:700; text-decoration:none;" data-i18n="guideLink">Guide: cosa guardare per ogni mood</a>
+        <a href="classifiche.html" style="color:var(--text-dim); font-size:0.74rem; font-weight:700; text-decoration:none;" data-i18n="rankingsLink">Classifiche: i migliori film e serie TV</a>
+        <a href="recensioni.html" style="color:var(--text-dim); font-size:0.74rem; font-weight:700; text-decoration:none;" data-i18n="reviewsLink">Recensioni e anteprime film</a>
+        <a href="chi-siamo.html" style="color:var(--text-dim); font-size:0.74rem; font-weight:700; text-decoration:none;" data-i18n="aboutLink">Chi siamo e Contatti</a>
+        <a href="privacy.html" style="color:var(--text-dim); font-size:0.74rem; font-weight:700; text-decoration:none;" data-i18n="privacyLink">Privacy Policy e Cookie</a>
+    </div>
+</footer>
+
 <div id="movieModal" class="modal">
     <span class="close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></span>
     <div class="modal-hero" id="modalHero"></div>
@@ -1043,6 +1054,7 @@
         guideLink: "Guide: cosa guardare per ogni mood",
         rankingsLink: "Classifiche: i migliori film e serie TV",
         reviewsLink: "Recensioni e anteprime film",
+        footerIntro: "MoodMovie ti aiuta a trovare film e serie TV in base al mood del momento, con indicazione di dove guardarli legalmente in streaming. Scopri le nostre guide tematiche, le classifiche e le recensioni aggiornate.",
         tmdbAttribution: "Dati su film e serie TV forniti da TMDB. Questo prodotto usa l'API TMDB ma non è approvato o certificato da TMDB.",
         exitProfile: "Esci",
         newProfileTitle: "Nuovo profilo",
@@ -1206,6 +1218,7 @@
         guideLink: "Guides: what to watch for every mood",
         rankingsLink: "Rankings: the best movies and TV shows",
         reviewsLink: "Reviews and movie previews",
+        footerIntro: "MoodMovie helps you find movies and TV shows based on your mood, with info on where to watch them legally. Check out our themed guides, rankings and reviews.",
         tmdbAttribution: "Movie and TV show data provided by TMDB. This product uses the TMDB API but is not endorsed or certified by TMDB.",
         exitProfile: "Exit",
         newProfileTitle: "New profile",
@@ -1369,6 +1382,7 @@
         guideLink: "Guías: qué ver según tu mood",
         rankingsLink: "Clasificaciones: las mejores películas y series",
         reviewsLink: "Reseñas y avances de películas",
+        footerIntro: "MoodMovie te ayuda a encontrar películas y series según tu mood, con indicación de dónde verlas legalmente en streaming. Descubre nuestras guías temáticas, clasificaciones y reseñas.",
         tmdbAttribution: "Datos de películas y series proporcionados por TMDB. Este producto usa la API de TMDB pero no está aprobado ni certificado por TMDB.",
         exitProfile: "Salir",
         newProfileTitle: "Nuevo perfil",
